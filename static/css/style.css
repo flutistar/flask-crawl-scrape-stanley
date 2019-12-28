@@ -1,0 +1,49 @@
+h2 .login100-form-title{
+  width: 30%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  vertical-align: middle;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.nav-logo {
+  background-color: #4CAF50;
+}
+li input {
+  vertical-align: middle;
+}
+.fileupload{
+  margin-left: 10%;
+}
+.cell-col-3{
+  width: 30% !important;
+}
+.cell-col-2{
+  width: 30% !important;
+}
+.cell-col-1{
+  width: 30% !important;
+}

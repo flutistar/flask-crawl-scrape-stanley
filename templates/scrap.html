@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section >
+	<div class="limiter">
+    	<button id="scrap_btn" type="button" class="scraping-btn">scrap</button>
+		<div class="field-body m-t-20">
+			<h2 id="myH2" class='m-b-20'>Crawled results</h2>
+			<div class="wrap-table100">
+				<div class="table">
+					<div class="row co-12 header">
+						<div class="cell">
+							IDs
+						</div>
+						<div class="cell">
+							Original Link
+						</div>
+						<div class="cell">
+							Page Title
+						</div>
+						<div class="cell">
+							Crawled Link
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-table100" style="height: 500px; overflow: auto;">
+				<div class="table" id='crawl-result-table'>
+					{% for rdata in data %}
+						<div class="row">
+							<div class="cell" data-title="IDs">
+								{{rdata.id}}
+							</div>
+							<div class="cell" data-title="originalurl">
+								{{rdata.originalurl}}
+							</div>
+							<div class="cell pagetitle-cell" data-title="pagetitle">
+								{{rdata.pagetitle}}
+							</div>
+							<div class="cell url-cell" data-title="c-url">
+								{{rdata.url}}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<div class="field-body m-t-20">
+			<h2 id="myH2" class='m-b-20'>Scraped results</h2>
+			<div class="wrap-table100">
+				<div class="table">
+					<div class="row co-12 header">
+						<div class="cell">
+							IDs
+						</div>
+						<div class="cell">
+							Scraped Link
+						</div>
+						<div class="cell">
+							Page Title
+						</div>
+						<div class="cell">
+							Head Line
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-table100" style="height: 500px; overflow: auto;">
+				<div class="table" id='scrape-result-table'>
+					<!-- {% for rdata in data %}
+						<div class="row">
+							<div class="cell" data-title="IDs">
+								{{rdata.id}}
+							</div>
+							<div class="cell" data-title="originalurl">
+								{{rdata.originalurl}}
+							</div>
+							<div class="cell pagetitle-cell" data-title="pagetitle">
+								{{rdata.pagetitle}}
+							</div>
+							<div class="cell url-cell" data-title="c-url">
+								{{rdata.url}}
+							</div>
+						</div>
+					{% endfor %} -->
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}

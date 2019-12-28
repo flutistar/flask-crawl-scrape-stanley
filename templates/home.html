@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section >
+  <div class="login100-form home validate-form p-l-55 p-r-55 p-t-28">
+    <div class="field-body field-1">
+      <div class="field m-t-20">
+        <h2 class="login100-title" >Input Original URL</h2>
+        <p style="display: flex;">
+          <input id="input-url" class="input100 m-t-10" placeholder="Input Url" >
+          <input id='url-button' class="normal-btn url m-t-10" type="button" value="Crawl" >
+        </p>
+      </div>
+    </div>
+    <div class="field-body m-t-20">
+		<h2 class="login100-title" style="margin-bottom: 20px;">Choose and Upload file</h2>
+		<input name="file" type="file" id='upload' class="fileupload">
+		<button id="upload-file-btn" type="button" class="normal-btn upload-file" >Crawl</button>
+	</div>
+	<div class="field-body m-t-20">
+		<h2 id="myH2" class='m-b-20'>Crawled results</h2>
+		<div class="wrap-table100">
+			<div class="table">
+				<div class="row co-12 header">
+					<div class="cell">
+						IDs
+					</div>
+					<div class="cell">
+						Original Link
+					</div>
+					<div class="cell">
+						Page Title
+					</div>
+					<div class="cell">
+						Crawled Link
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrap-table100" style="height: 500px; overflow: auto;">
+			<div class="table" id ="scrapResults">
+				
+			</div>
+		</div>
+	</div>
+	
+	
+
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}

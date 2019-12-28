@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block body %}
+<section>	
+	<section >  
+		<ul>
+		  <li class="nav-logo"><a href="/">SCRAP</a></li>
+		  
+		  <li style="float:right"><a class="active" href="/">Log In</a></li>
+		  <!-- <li style="float:right"><a class="active" href="/settings"><i class="glyphicon glyphicon-cog"></i>Settings</a></li> -->
+		</ul>
+	</section>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-78">
+					<span class="login100-form-title">
+						Sign Up
+					</span>
+					<div class="wrap-input100 validate-input m-b-16 m-t-30" data-validate = "Please enter email">
+						<input class="input100" id="signup-mail" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						<input id="signup-user" class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-30" data-validate = "Please enter password">
+						<input class="input100" id="signup-pass" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="container-login100-form-btn">
+						<input type = 'button' class="login100-form-btn" id="signup-button" value="Sign Up">
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
