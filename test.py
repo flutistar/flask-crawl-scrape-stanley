@@ -9,4 +9,3 @@ regex = re.compile(
         r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 
 print(regex.search('https://www.visus.com/en/company.html'))
-dddddddddddddddddddddddd
