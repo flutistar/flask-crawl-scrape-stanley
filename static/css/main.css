@@ -592,8 +592,8 @@ iframe {
 }
 
 .row .cell:nth-child(1) {
-  width: 5% !important;
-  min-width: 5% !important;
+  /* width: 5% !important;
+  min-width: 5% !important; */
   max-width: 5% !important;
   border-color: #ebefed;
   padding-left: 40px;
@@ -601,29 +601,35 @@ iframe {
 }
 
 .row .cell:nth-child(2) {
-  width: 35% !important;
-  min-width: 35% !important;
+  /* width: 35% !important;
+  min-width: 35% !important; */
   max-width: 35% !important;
   border-color: #ebefed;
   padding-left: 40px;
 }
 
 .row .cell:nth-child(3) {
-  width: 20% !important;
-  min-width: 20% !important;
+  /* width: 20% !important;
+  min-width: 20% !important; */
   max-width: 20% !important;
   border-color: #ebefed;
   padding-left: 40px;
 }
 
 .row .cell:nth-child(4) {
-  width: 40% !important;
-  min-width: 40% !important;
+  /* width: 40% !important;
+  min-width: 40% !important; */
   max-width: 40% !important;
   border-color: #ebefed;
   padding-left: 40px;
 }
-
+row .cell:nth-child(5) {
+  /* width: 40% !important;
+  min-width: 40% !important; */
+  max-width: 40% !important;
+  border-color: #ebefed;
+  padding-left: 40px;
+}
 
 .table, .row {
   width: 100% !important;

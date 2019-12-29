@@ -100,18 +100,30 @@ def settings():
 @app.route("/input_url", methods=['GET', 'POST'])
 def input_url():
     if request.method == 'POST':
-        url = request.values
+        url = request.values['inputurl']
+        url = url.strip()
         # Crawl with given url
-        rst_links= getLinks(url['inputurl'])
+        rst_links= getLinks(url)
         results = db.session.query(CrawledLinks.url).all()
         result_list = [row[0] for row in results]
         # print(type(rst_links))
         if type(rst_links) is not str:
+            org_results = db.session.query(OriginalUrl.url).all()
+            org_urls = [row[0] for row in org_results]
+            # print(len(org_results))
+            if not url in org_urls:
+                org_id = len(org_urls) + 1
+                org_add_row = OriginalUrl(id = org_id, url = url)
+                db.session.add(org_add_row)
+                db.session.commit()
+            org_sub_num = 1
             for item in rst_links:
                 if not item[1] in result_list:
-                    entry = CrawledLinks(url['inputurl'], pagetitle =item[0], url = item[1])
+                    orgid = str(org_id) + '-' + str(org_sub_num)
+                    entry = CrawledLinks(orgid=orgid, originalurl=url, pagetitle =item[0], url = item[1])
                     db.session.add(entry)
                     db.session.commit()
+                    org_sub_num += 1 
     return json.dumps({'links': rst_links})
 
 # --------- Scrap page ------------------------------------------------------------- #
@@ -148,15 +160,27 @@ def startscrape():
     return json.dumps({'status': 'Failed'})
 
 # ======== Data Schema ============================================================== #
+class OriginalUrl(db.Model):
+    __tablename__ = 'originalurl'
+    id = db.Column(db.Integer, primary_key=True)
+    url = db.Column(db.String(250), nullable=False)
+    
+    def __init__(self, url, id):
+        self.id = id
+        self.url = url
+
+    def __repr__(self):
+        return self.id
 class CrawledLinks(db.Model):
     __tablename__ = 'crawledlinks'
-
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    orgid = db.Column(db.String(20), nullable = False)
     originalurl = db.Column(db.String(250), nullable=False)
     pagetitle = db.Column(db.String(80), nullable=False)
     url = db.Column(db.String(250), nullable=False)
 
-    def __init__(self, originalurl, pagetitle, url):
+    def __init__(self, orgid, originalurl, pagetitle, url):
+        self.orgid = orgid
         self.originalurl = originalurl
         self.pagetitle = pagetitle
         self.url = url
