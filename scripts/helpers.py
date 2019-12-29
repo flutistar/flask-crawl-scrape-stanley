@@ -66,3 +66,26 @@ def credentials_valid(username, password):
 def username_taken(username):
     with session_scope() as s:
         return s.query(tabledef.User).filter(tabledef.User.username.in_([username])).first()
+
+def getcrawleddata():
+    with session_scope() as s:
+        rst = s.query(tabledef.CrawledLinks).all()
+        # results = [row[0] for row in rst]
+        return rst
+def getorgdata():
+    with session_scope() as s:
+        rst = s.query(tabledef.OriginalUrl).all()
+        # print(rst)
+        # results = [row[0] for row in rst]
+        return rst
+def addorgdata(id, url):
+    with session_scope() as s:
+        row = tabledef.OriginalUrl(id = id, url = url)
+        s.add(row)
+        s.commit()
+def addcrawldata(orgid, orgurl, title, url):
+    with session_scope() as s:
+        row = tabledef.CrawledLinks(orgid=orgid, originalurl=orgurl, pagetitle =title, url = url)
+        s.add(row)
+        s.commit()
+    

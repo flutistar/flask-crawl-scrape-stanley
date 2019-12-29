@@ -1,9 +1,10 @@
 from bs4 import BeautifulSoup
 import urllib2
 import re
+from error import logError
 # from app import CrawledLinks
 def getOrgName(url):
-    url = url.strip()
+    # url = url.strip()
     try:
         page = urllib2.urlopen(url)
         bsoup = BeautifulSoup(page)
@@ -15,7 +16,7 @@ def getOrgName(url):
                 if text.parent.name in allowlist:
                     orgname = text
                     break 
-        print(url, 'title', orgname)
+        return orgname
     except:
         print('unknown url')
     
@@ -23,11 +24,13 @@ def getOrgName(url):
 
 def getLinks(url):
     url = url.strip()
-    if url[-1] == '/':
-        url = url[:-1]    
+    if url != '':
+        if url[-1] == '/':
+            url = url[:-1]
     try:
         html_page = urllib2.urlopen(url)
     except:
+        logError ('Invaled url. Crawl failed. ' + url)
         return "unknown url"
     soup = BeautifulSoup(html_page)
     # -------------------------------------------------
@@ -39,7 +42,7 @@ def getLinks(url):
         if text.parent.name in allowlist:
             orgname = text
             break
-    print(orgname) 
+    # print(orgname) 
     # -------------------------------------------------
     rst_links = []
     txt_dict=['about', 'assistant', 'blog', 'business', 'business plan', 'campus', 'careers', 'contact', 'contact cs', 'company', 'datasets',
@@ -58,9 +61,11 @@ def getLinks(url):
         if txt.lower() in txt_dict:
             buf = []
             clink = link.get('href')
-            clink = clink.strip()
+            # clink = clink.strip()
             # if url[-1] == '/':
             #     print('()()()()()()()()', url)
+            if type(clink) is 'NoneType':
+                pass
             if clink[0] == '.' or clink[0] == '#':
                 clink = clink[1:]
             if clink[-1] != '/':
@@ -86,8 +91,10 @@ def getLinks(url):
                 #     else:
                 #         urlbuf = url + clink
                 # print(urlbuf)
+
             buf.append(link.get_text())
             buf.append(urlbuf)
+            # buf.append(orgname)
             rst_links.append(buf)
             # else:
             #     links.append(url + link.get('href'))

@@ -1,0 +1,230 @@
+
+[ 17:09:46 ]Unknown url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 17:09:47 ]Unknown url. Crawl failed. http://transinsight.com
+[ 17:09:50 ]Unknown url. Crawl failed. http://www.gtandw.com
+[ 17:09:51 ]Unknown url. Crawl failed. http://www.exerlights.com/en
+[ 17:09:57 ]Unknown url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 17:10:57 ]   Unknown url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 17:10:58 ]   Unknown url. Crawl failed. http://transinsight.com
+[ 17:11:01 ]   Unknown url. Crawl failed. http://www.gtandw.com
+[ 17:11:02 ]   Unknown url. Crawl failed. http://www.exerlights.com/en
+[ 17:11:05 ]   Unknown url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 17:14:26 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/research/events.html?draft=1
+[ 17:14:28 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html?draft=1#TNM1
+[ 17:14:30 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html?draft=1
+[ 17:14:30 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/research/team.html?draft=1
+[ 17:14:36 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html?draft=1
+[ 17:14:50 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html?draft=1
+[ 17:51:31 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/research/events.html?draft=1
+[ 17:51:45 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html?draft=1
+[ 17:52:11 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html?draft=1
+[ 18:27:17 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 18:27:19 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 18:27:23 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 18:27:24 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 18:27:31 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 18:30:24 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html?draft=1
+[ 18:30:36 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/research/events.html?draft=1
+[ 18:30:39 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/research/team.html?draft=1
+[ 18:30:40 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html?draft=1#TNM1
+[ 18:30:49 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html?draft=1
+[ 18:30:54 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html?draft=1
+[ 18:32:24 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 18:32:25 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 18:32:27 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 18:32:33 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 18:32:33 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 18:35:14 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 18:35:15 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 18:35:21 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 18:35:27 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 18:35:37 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 18:35:40 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 18:35:49 ]   Invaled url. Crawl failed. https://www.idmt.fraunhofer.de/en/institute/projects_products/projects/expired_publicly_financed_research_projects/aaladin.html
+[ 18:37:28 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 18:37:29 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 18:37:32 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 18:37:34 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 18:37:42 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 18:55:33 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 18:55:34 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 18:55:39 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 18:55:39 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 18:55:52 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 18:58:21 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 18:58:28 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 18:58:29 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 18:58:35 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 18:58:37 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:01:36 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:01:37 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:01:41 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:01:42 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:01:53 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:03:18 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:03:20 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:03:23 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:03:25 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:03:40 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:04:40 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:04:42 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:04:54 ]   Invaled url. Crawl failed. http://www.desyncra.com
+[ 19:04:56 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:04:57 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 19:05:04 ]   Invaled url. Crawl failed. https://www.peptech.de/en
+[ 19:05:06 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:05:06 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 19:05:06 ]   Invaled url. Crawl failed. https://www.idmt.fraunhofer.de/en/institute/projects_products/projects/expired_publicly_financed_research_projects/aaladin.html
+[ 19:05:15 ]   Invaled url. Crawl failed. http://www.vision-in-x.com/en/home.html
+[ 19:06:36 ]   Invaled url. Crawl failed. http://www.grintech.de
+[ 19:06:36 ]   Invaled url. Crawl failed. https://www.spin-ag.de
+[ 19:06:36 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:06:36 ]   Invaled url. Crawl failed. http://www.gruenden.jena.de/index.php?L=1
+[ 19:06:36 ]   Invaled url. Crawl failed. http://www.hte-company.com
+[ 19:06:36 ]   Invaled url. Crawl failed. http://www.entrepreneurship.tu-berlin.de
+[ 19:06:46 ]   Invaled url. Crawl failed. http://www.desyncra.com
+[ 19:06:46 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 19:06:46 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:06:46 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:06:46 ]   Invaled url. Crawl failed. https://robodev.eu/en
+[ 19:06:46 ]   Invaled url. Crawl failed. http://www.vision-in-x.com/en/home.html
+[ 19:06:56 ]   Invaled url. Crawl failed. https://www.peptech.de/en
+[ 19:06:56 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:06:56 ]   Invaled url. Crawl failed. https://www.franka.de
+[ 19:06:56 ]   Invaled url. Crawl failed. https://www.uni-luebeck.de/en
+[ 19:06:56 ]   Invaled url. Crawl failed. http://www.gruenderzentrum.rwth-aachen.de/ueber-uns
+[ 19:06:56 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 19:07:06 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:07:07 ]   Invaled url. Crawl failed. https://www.eligo.de/en
+[ 19:07:07 ]   Invaled url. Crawl failed. https://www.visus.com/en/company.html
+[ 19:07:07 ]   Invaled url. Crawl failed. https://www.idmt.fraunhofer.de/en/institute/projects_products/projects/expired_publicly_financed_research_projects/aaladin.html
+[ 19:07:07 ]   Invaled url. Crawl failed. https://www.cognitive-workbench.com/category/overview
+[ 19:09:23 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:09:25 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:09:26 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:09:26 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:09:31 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:11:59 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:12:01 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:12:04 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:12:05 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:12:10 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:12:50 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:12:51 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:12:55 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:12:57 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:13:03 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:16:50 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:16:51 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:16:54 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:16:55 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:17:00 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:19:27 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:19:28 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:19:32 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:19:33 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:19:37 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:19:38 ]   Invaled url. Crawl failed. 
+[ 19:31:44 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 19:31:45 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 19:31:49 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 19:31:55 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 19:31:57 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 19:31:58 ]   Invaled url. Crawl failed. 
+[ 20:25:07 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:25:08 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:25:15 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:25:16 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:25:23 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:25:26 ]   Invaled url. Crawl failed. 
+[ 20:30:04 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:30:06 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:30:13 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:30:14 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:30:21 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:30:24 ]   Invaled url. Crawl failed. 
+[ 20:34:16 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:34:18 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:34:24 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:34:25 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:34:31 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:34:35 ]   Invaled url. Crawl failed. 
+[ 20:37:40 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:37:42 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:37:48 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:37:49 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:37:55 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:38:00 ]   Invaled url. Crawl failed. 
+[ 20:48:43 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:48:44 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:48:51 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:48:52 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:48:58 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:49:02 ]   Invaled url. Crawl failed. 
+[ 20:50:57 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:50:59 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:51:05 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:51:07 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:51:12 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:51:17 ]   Invaled url. Crawl failed. 
+[ 20:54:21 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:54:22 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:54:25 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:54:26 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:54:31 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:54:31 ]   Invaled url. Crawl failed. 
+[ 20:55:08 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:55:10 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:55:13 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:55:14 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:55:17 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:55:19 ]   Invaled url. Crawl failed. 
+[ 20:56:48 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:56:49 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:56:52 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:56:53 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:56:58 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:56:59 ]   Invaled url. Crawl failed. 
+[ 20:58:20 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:58:22 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 20:58:25 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 20:58:26 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 20:58:29 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 20:58:30 ]   Invaled url. Crawl failed. 
+[ 20:59:56 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 20:59:57 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:00:00 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:00:01 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:00:06 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:00:07 ]   Invaled url. Crawl failed. 
+[ 21:02:52 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:02:53 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:02:56 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:02:58 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:03:02 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:03:02 ]   Invaled url. Crawl failed. 
+[ 21:05:47 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:05:47 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:05:51 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:05:52 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:05:56 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:06:02 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:06:03 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:06:06 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:06:07 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:06:11 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:07:21 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:07:23 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:07:26 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:07:27 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:07:32 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:08:08 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:08:09 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:08:13 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:08:14 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:08:17 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:09:06 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:09:08 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:09:10 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:09:11 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:09:15 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html

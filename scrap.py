@@ -2,12 +2,15 @@ from bs4 import BeautifulSoup, NavigableString, Declaration, Comment
 import urllib2
 import re
 import requests
+from error import logError
 
 def startscrap(url):
     # url = 'https://thatec-innovation.com/index.php'
+    url = url.strip()
     try:
         res = requests.get(url)
     except:
+        logError('Scraped Failed. ' + url )
         return 'Scrap Failed'
     html_page = res.content
     soup = BeautifulSoup(html_page, 'html.parser')
@@ -32,7 +35,7 @@ def startscrap(url):
                 if text == '\n' or text == '\r' or text == '\r\n': # Check if the content is null
                     pass
                 elif isinstance(text, NavigableString): #Check if the element is Comment
-                    if type(text) not in (Comment, Declaration) and text.strip(): 
+                    if type(text) not in (Comment, Declaration): 
                         content += text
     # print(title)
     # print(content)

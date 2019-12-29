@@ -16,11 +16,15 @@ from scrap import startscrap
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12)  # Generic key for dev purposes only
-app.config.update(
-    SQLALCHEMY_DATABASE_URI='postgresql://postgres:password@localhost:5432/catalog_db',
-    SQLALCHEMY_TRACK_MODIFICATIONS=False
-)
-db = SQLAlchemy(app)
+# app.config.update(
+#     SQLALCHEMY_DATABASE_URI='postgresql://postgres:password@localhost:5432/catalog_db',
+#     SQLALCHEMY_TRACK_MODIFICATIONS=False
+# )
+# db = SQLAlchemy(app)
+
+# Heroku
+from flask_heroku import Heroku
+heroku = Heroku(app)
 
 # ======== Routing =========================================================== #
 # -------- Login ------------------------------------------------------------- #
@@ -58,26 +62,26 @@ def gosignup():
 # -------- Signup ---------------------------------------------------------- #
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    if not session.get('logged_in'):
-        form = forms.LoginForm(request.form)
-        if request.method == 'POST':
-            username = request.form['username'].lower()
-            password = helpers.hash_password(request.form['password'])
-            email = request.form['email']
-            if form.validate():
-                if not helpers.username_taken(username):
-                    helpers.add_user(username, password, email)
-                    session['logged_in'] = True
-                    session['username'] = username
-                    print('signup success')
-                    return render_template('login.html')
-                print('username taken')
-                return json.dumps({'status': 'Username taken'})
-            print('User/Pass required')
-            return json.dumps({'status': 'User/Pass required'})
-        print('login.html')
-        return render_template('login.html', form=form)
-    print('login')
+    # if not session.get('logged_in'):
+    #     form = forms.LoginForm(request.form)
+    #     if request.method == 'POST':
+    #         username = request.form['username'].lower()
+    #         password = helpers.hash_password(request.form['password'])
+    #         email = request.form['email']
+    #         if form.validate():
+    #             if not helpers.username_taken(username):
+    #                 helpers.add_user(username, password, email)
+    #                 session['logged_in'] = True
+    #                 session['username'] = username
+    #                 print('signup success')
+    #                 return render_template('login.html')
+    #             print('username taken')
+    #             return json.dumps({'status': 'Username taken'})
+    #         print('User/Pass required')
+    #         return json.dumps({'status': 'User/Pass required'})
+    #     print('login.html')
+    #     return render_template('login.html', form=form)
+    # print('login')
     return redirect(url_for('logout'))
 
 # -------- Settings ---------------------------------------------------------- #
@@ -102,28 +106,38 @@ def input_url():
     if request.method == 'POST':
         url = request.values['inputurl']
         url = url.strip()
+        if url == '':
+            return json.dumps({'links': 'Blank url'})
         # Crawl with given url
-        rst_links= getLinks(url)
-        results = db.session.query(CrawledLinks.url).all()
-        result_list = [row[0] for row in results]
+        rst_links = []
+        try:
+            rst_links= getLinks(url)
+        except:
+            print(url)
+        # results = db.session.query(CrawledLinks.url).all()
+        result_list = helpers.getcrawleddata()
         # print(type(rst_links))
         if type(rst_links) is not str:
-            org_results = db.session.query(OriginalUrl.url).all()
-            org_urls = [row[0] for row in org_results]
+            # org_results = db.session.query(OriginalUrl.url).all()
+            org_urls = helpers.getorgdata()
             # print(len(org_results))
             if not url in org_urls:
                 org_id = len(org_urls) + 1
-                org_add_row = OriginalUrl(id = org_id, url = url)
-                db.session.add(org_add_row)
-                db.session.commit()
+                # orgname = getOrgName(url)
+                # print(orgname)
+                # org_add_row = OriginalUrl(id = org_id, url = url)
+                # db.session.add(org_add_row)
+                # db.session.commit()
+                helpers.addorgdata(org_id, url)
             org_sub_num = 1
             for item in rst_links:
                 if not item[1] in result_list:
                     orgid = str(org_id) + '-' + str(org_sub_num)
-                    entry = CrawledLinks(orgid=orgid, originalurl=url, pagetitle =item[0], url = item[1])
-                    db.session.add(entry)
-                    db.session.commit()
+                    helpers.addcrawldata(orgid, url, item[0], item[1])
+                    # db.session.add(entry)
+                    # db.session.commit()
                     org_sub_num += 1 
+            
     return json.dumps({'links': rst_links})
 
 # --------- Scrap page ------------------------------------------------------------- #
@@ -131,21 +145,62 @@ def input_url():
 def scrap_page():
     if session.get('logged_in'):
         if request.method == 'GET':
+
             data = CrawledLinks.query.all()
             return render_template('scrap.html', data = data)
         return json.dumps({'status': 'Failed'})
     return redirect(url_for('login'))
 
+# @app.route("/viewscraped", methods=['GET', 'POST'])
+# def view_data():
+#     if session.get('logged_in'):
+#         if request.method == 'GET':
+#             data = ScrapedData.query.all()
+#             return render_template('viewdata.html', data = data)
+#         return json.dumps({'status': 'Failed'})
+#     return redirect(url_for('login'))
+@app.route("/viewscraped", methods=['GET', 'POST'])
+def view_data():
+    if session.get('logged_in'):
+        if request.method == 'GET':
+            with helpers.session_scope() as s:
+                # data = tabledef.ScrapedData.query.all()
+                data = s.query(tabledef.ScrapedData).all()
+            return render_template('viewdata.html', data = data)
+        return json.dumps({'status': 'Failed'})
+    return redirect(url_for('login'))
 # --------- Run Scraper ------------------------------------------------------------- #
+# @app.route("/startscrape", methods=['GET', 'POST'])
+# def startscrape():
+#     if request.method == 'POST':
+#         url = request.values['scrapurl']
+#         data = startscrap(url)
+#         if type(data) is not str:
+#             entry = ScrapedData(url = url, title = data[0], keywords ='keys', content = data[1])
+#             db.session.add(entry)
+#             db.session.commit()
+#             return json.dumps({'title': data[0]})
+#         # results = db.session.query(CrawledLinks.url).all()
+#         # result_list = [row[0] for row in results]
+#         # for url in result_list:
+#         #     data = startscrap(url)
+#         #     if data != 'Scrap Failed':
+#         #         print('Scraped url', url)
+                
+            
+#         else:
+#             return json.dumps({'title': 'failed'})
+#     return json.dumps({'status': 'Failed'})
 @app.route("/startscrape", methods=['GET', 'POST'])
 def startscrape():
     if request.method == 'POST':
         url = request.values['scrapurl']
         data = startscrap(url)
         if type(data) is not str:
-            entry = ScrapedData(url = url, title = data[0], keywords ='keys', content = data[1])
-            db.session.add(entry)
-            db.session.commit()
+            with helpers.session_scope() as s:
+                entry = tabledef.ScrapedData(url = url, title = data[0], keywords ='keys', content = data[1])
+                s.add(entry)
+                s.commit()
             return json.dumps({'title': data[0]})
         # results = db.session.query(CrawledLinks.url).all()
         # result_list = [row[0] for row in results]
@@ -158,52 +213,51 @@ def startscrape():
         else:
             return json.dumps({'title': 'failed'})
     return json.dumps({'status': 'Failed'})
-
 # ======== Data Schema ============================================================== #
-class OriginalUrl(db.Model):
-    __tablename__ = 'originalurl'
-    id = db.Column(db.Integer, primary_key=True)
-    url = db.Column(db.String(250), nullable=False)
+# class OriginalUrl(db.Model):
+#     __tablename__ = 'originalurl'
+#     id = db.Column(db.Integer, primary_key=True)
+#     url = db.Column(db.String(250), nullable=False)
     
-    def __init__(self, url, id):
-        self.id = id
-        self.url = url
+#     def __init__(self, url, id):
+#         self.id = id
+#         self.url = url
 
-    def __repr__(self):
-        return self.id
-class CrawledLinks(db.Model):
-    __tablename__ = 'crawledlinks'
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    orgid = db.Column(db.String(20), nullable = False)
-    originalurl = db.Column(db.String(250), nullable=False)
-    pagetitle = db.Column(db.String(80), nullable=False)
-    url = db.Column(db.String(250), nullable=False)
+#     def __repr__(self):
+#         return self.id
+# class CrawledLinks(db.Model):
+#     __tablename__ = 'crawledlinks'
+#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     orgid = db.Column(db.String(20), nullable = False)
+#     originalurl = db.Column(db.String(250), nullable=False)
+#     pagetitle = db.Column(db.String(80), nullable=False)
+#     url = db.Column(db.String(250), nullable=False)
 
-    def __init__(self, orgid, originalurl, pagetitle, url):
-        self.orgid = orgid
-        self.originalurl = originalurl
-        self.pagetitle = pagetitle
-        self.url = url
+#     def __init__(self, orgid, originalurl, pagetitle, url):
+#         self.orgid = orgid
+#         self.originalurl = originalurl
+#         self.pagetitle = pagetitle
+#         self.url = url
 
-    def __repr__(self):
-        return self.id
-class ScrapedData(db.Model):
-    __tablename__ = 'scrapeddata'
+#     def __repr__(self):
+#         return self.id
+# class ScrapedData(db.Model):
+#     __tablename__ = 'scrapeddata'
 
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    url = db.Column(db.String(250), nullable=False)
-    title = db.Column(db.String(80), nullable=False)
-    keywords = db.Column(db.String(80), nullable=False)
-    content = db.Column(db.Text, nullable=False)
+#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     url = db.Column(db.String(250), nullable=False)
+#     title = db.Column(db.String(80), nullable=False)
+#     keywords = db.Column(db.String(80), nullable=False)
+#     content = db.Column(db.Text, nullable=False)
 
-    def __init__(self, url, title, keywords, content):
-        self.url = url
-        self.title = title
-        self.keywords = keywords
-        self.content = content
+#     def __init__(self, url, title, keywords, content):
+#         self.url = url
+#         self.title = title
+#         self.keywords = keywords
+#         self.content = content
 
-    def __repr__(self):
-        return self.id
+#     def __repr__(self):
+#         return self.id
 # ======== Main ============================================================== #
 if __name__ == "__main__":
     db.create_all()

@@ -592,45 +592,40 @@ iframe {
 }
 
 .row .cell:nth-child(1) {
-  /* width: 5% !important;
-  min-width: 5% !important; */
-  max-width: 5% !important;
+  width: 20% !important;
+  min-width: 20% !important;
+  max-width: 20% !important;
   border-color: #ebefed;
-  padding-left: 40px;
-  
+  padding-left: 20px;
+  text-align: left;
 }
 
 .row .cell:nth-child(2) {
-  /* width: 35% !important;
-  min-width: 35% !important; */
-  max-width: 35% !important;
+  width: 25% !important;
+  min-width: 25% !important;
+  max-width: 25% !important;
   border-color: #ebefed;
   padding-left: 40px;
+  text-align: left;
 }
 
 .row .cell:nth-child(3) {
-  /* width: 20% !important;
-  min-width: 20% !important; */
-  max-width: 20% !important;
+  width: 25% !important;
+  min-width: 25% !important;
+  max-width: 25% !important;
   border-color: #ebefed;
   padding-left: 40px;
+  text-align: left;
 }
 
 .row .cell:nth-child(4) {
-  /* width: 40% !important;
-  min-width: 40% !important; */
-  max-width: 40% !important;
+  width: 30% !important;
+  min-width: 30% !important;
+  max-width: 30% !important;
   border-color: #ebefed;
   padding-left: 40px;
+  text-align: left;
 }
-row .cell:nth-child(5) {
-  /* width: 40% !important;
-  min-width: 40% !important; */
-  max-width: 40% !important;
-  border-color: #ebefed;
-  padding-left: 40px;
-}
-
 .table, .row {
   width: 100% !important;
 }

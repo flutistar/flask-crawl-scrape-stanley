@@ -51,7 +51,7 @@ $(document).ready(function() {
         }
       });
   });
-  
+  var counter = 0;
   $("#scrap_btn").click(function(){
     var rows = document.getElementsByClassName("url-cell");
     var linknames = document.getElementsByClassName("pagetitle-cell");
@@ -66,15 +66,10 @@ $(document).ready(function() {
             // console.log(JSON.parse(response)["title"])
             var data = JSON.parse(response)["title"];
             var h = document.getElementById("scrape-result-table");
-            // if(typeof(data) == 'object'){
-              // console.log(links.length);
-              // for (idx=0; idx<links.length; idx++){
                 if(data != null) {
                   counter ++;
                   h.insertAdjacentHTML("afterbegin", "<div class='row'><div class='cell' data-title='ID' > "+ counter +"</div><div class='cell' data-title='Scraped Link' > "+ url +"</div><div class='cell' data-title='Page Title' >"+ linkname +"</div><div class='cell' data-title='Head Line' >"+ data+"</div> </div>"); 
                 }
-              // }
-            // }
             if (data === "Signup successful") { alert('success') }
           } 
         });
@@ -87,18 +82,7 @@ $(document).ready(function() {
       }
       scrapawait();
     }
-    // for(var idx = 0; idx < urls.length; idx ++){
-    //   const scrapawait = async () => {
-    //     await scrapasync(rows[i].innerText);
-    //   }
-    //   scrapawait();
-    // }
-    // $.get("/startscrape", function(status){
-    //   console.log(rst, status);
-    // });
-    // console.log('asdfa',rst);
   });
-  var counter = 0;
   $('#upload-file-btn').click(function() {
     var file = document.getElementById('upload').files[0];
     var reader = new FileReader();
@@ -112,7 +96,7 @@ $(document).ready(function() {
             var links = JSON.parse(response)["links"];
             var h = document.getElementById("scrapResults");
             if(typeof(links) == 'object'){
-              console.log(links.length);
+              console.log(links);
               for (idx=0; idx<links.length; idx++){
                 if(links!=null) {
                   counter ++;
