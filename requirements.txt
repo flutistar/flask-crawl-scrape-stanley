@@ -6,5 +6,5 @@ requests
 flask-heroku
 gunicorn
 bs4
-urllib2
+urllib
 re
