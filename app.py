@@ -7,7 +7,7 @@ from flask import Flask, redirect, url_for, render_template, request, session
 import json
 import sys
 import os
-from crawel import getLinks
+from crawel import getLinks, getOrgName
 import re
 from flask_sqlalchemy import SQLAlchemy
 from model import inputdata
@@ -105,7 +105,7 @@ def input_url():
         rst_links= getLinks(url['inputurl'])
         results = db.session.query(CrawledLinks.url).all()
         result_list = [row[0] for row in results]
-        print(type(rst_links))
+        # print(type(rst_links))
         if type(rst_links) is not str:
             for item in rst_links:
                 if not item[1] in result_list:

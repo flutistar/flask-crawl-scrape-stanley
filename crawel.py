@@ -2,6 +2,24 @@ from bs4 import BeautifulSoup
 import urllib2
 import re
 # from app import CrawledLinks
+def getOrgName(url):
+    url = url.strip()
+    try:
+        page = urllib2.urlopen(url)
+        bsoup = BeautifulSoup(page)
+        allowlist = ['span', 'p', 'div', 'h3', 'h1', 'h2']
+        orgname = bsoup.find_all('title')
+        if orgname.strip() == '':
+            texts = bsoup.find_all(text=True)
+            for text in texts:
+                if text.parent.name in allowlist:
+                    orgname = text
+                    break 
+        print(url, 'title', orgname)
+    except:
+        print('unknown url')
+    
+        
 
 def getLinks(url):
     url = url.strip()
@@ -12,6 +30,17 @@ def getLinks(url):
     except:
         return "unknown url"
     soup = BeautifulSoup(html_page)
+    # -------------------------------------------------
+    allowlist = ['span', 'p', 'div', 'h3', 'h1', 'h2', 'title']
+    # orgname = soup.find('title')
+    # if orgname is None:
+    texts = soup.find_all(text=True)
+    for text in texts:
+        if text.parent.name in allowlist:
+            orgname = text
+            break
+    print(orgname) 
+    # -------------------------------------------------
     rst_links = []
     txt_dict=['about', 'assistant', 'blog', 'business', 'business plan', 'campus', 'careers', 'contact', 'contact cs', 'company', 'datasets',
         'equipment' , 'events', 'highlights', 'home', 'homepage', 'industries', 'inks', 'jobs', 'modules', 'news', 'news & events',             
@@ -30,8 +59,8 @@ def getLinks(url):
             buf = []
             clink = link.get('href')
             clink = clink.strip()
-            if url[-1] == '/':
-                print('()()()()()()()()', url)
+            # if url[-1] == '/':
+            #     print('()()()()()()()()', url)
             if clink[0] == '.' or clink[0] == '#':
                 clink = clink[1:]
             if clink[-1] != '/':
@@ -56,7 +85,7 @@ def getLinks(url):
                 #         urlbuf = url + clink[3:]
                 #     else:
                 #         urlbuf = url + clink
-                print(urlbuf)
+                # print(urlbuf)
             buf.append(link.get_text())
             buf.append(urlbuf)
             rst_links.append(buf)
