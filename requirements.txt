@@ -6,4 +6,3 @@ requests
 flask-heroku
 gunicorn
 bs4
-re
