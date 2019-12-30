@@ -23,8 +23,8 @@ app.secret_key = os.urandom(12)  # Generic key for dev purposes only
 # db = SQLAlchemy(app)
 
 # Heroku
-# from flask_heroku import Heroku
-# heroku = Heroku(app)
+from flask_heroku import Heroku
+heroku = Heroku(app)
 
 # ======== Routing =========================================================== #
 # -------- Login ------------------------------------------------------------- #
