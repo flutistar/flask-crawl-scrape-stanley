@@ -1,12 +1,15 @@
 from bs4 import BeautifulSoup
-import urllib2
+import urllib3
 import re
+import requests
 from error import logError
+from support import getdict, getregax, checkpattern
 # from app import CrawledLinks
 def getOrgName(url):
     # url = url.strip()
     try:
-        page = urllib2.urlopen(url)
+        r = requests.get(url)
+        page = BeautifulSoup(r.text, 'html.parser')
         bsoup = BeautifulSoup(page)
         allowlist = ['span', 'p', 'div', 'h3', 'h1', 'h2']
         orgname = bsoup.find_all('title')
@@ -28,11 +31,11 @@ def getLinks(url):
         if url[-1] == '/':
             url = url[:-1]
     try:
-        html_page = urllib2.urlopen(url)
+        html_page = requests.get(url)
     except:
         logError ('Invaled url. Crawl failed. ' + url)
         return "unknown url"
-    soup = BeautifulSoup(html_page)
+    soup = BeautifulSoup(html_page.text, 'html.parser')
     # -------------------------------------------------
     allowlist = ['span', 'p', 'div', 'h3', 'h1', 'h2', 'title']
     # orgname = soup.find('title')
@@ -45,10 +48,14 @@ def getLinks(url):
     # print(orgname) 
     # -------------------------------------------------
     rst_links = []
-    txt_dict=['about', 'assistant', 'blog', 'business', 'business plan', 'campus', 'careers', 'contact', 'contact cs', 'company', 'datasets',
-        'equipment' , 'events', 'highlights', 'home', 'homepage', 'industries', 'inks', 'jobs', 'modules', 'news', 'news & events',             
-        'partner', 'patients', 'product', 'principle', 'profile', 'profil', 'produkt', 'publications', 'send email', 'services', 'solutions', 'support', 
-        'system', 'team', 'technology', 'training', 'university']
+    positive_dict = []
+    # regaxpattern_dict = {}
+    # positive_dict=['about', 'assistant', 'blog', 'business', 'business plan', 'campus', 'careers', 'contact', 'contact cs', 'company', 'datasets',
+    #     'equipment' , 'events', 'highlights', 'home', 'homepage', 'industries', 'inks', 'jobs', 'modules', 'news', 'news & events',             
+    #     'partner', 'patients', 'product', 'principle', 'profile', 'profil', 'produkt', 'publications', 'send email', 'services', 'solutions', 'support', 
+    #     'system', 'team', 'technology', 'training', 'university']
+    positive_dict = getdict('positive.txt')
+    negative_dict = getdict('negative.txt')
     regex = re.compile(
         r'^https?://'  # http:// or https://
         r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|'  # domain...
@@ -58,7 +65,7 @@ def getLinks(url):
         r'(?:/?|[/?]\S+)$', re.IGNORECASE)
     for link in soup.findAll('a'):
         txt = link.get_text()
-        if txt.lower() in txt_dict:
+        if txt.lower() in positive_dict and not txt.lower() in negative_dict:
             buf = []
             clink = link.get('href')
             # clink = clink.strip()
@@ -70,7 +77,7 @@ def getLinks(url):
                 clink = clink[1:]
             if clink[-1] != '/':
                 clink == clink + '/'
-            if clink is not None and regex.search(clink):
+            if clink is not None and checkpattern(clink):
                 urlbuf = clink
             else:
                 if url[-1] == '/' and clink[0] == '/':

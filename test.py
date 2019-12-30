@@ -48,10 +48,8 @@
 #     return results
 # rs = []
 # rs = startscrap('https://www.ibmt.fraunhofer.de')
-from datetime import datetime
-file1 = open("log.txt","a")#append mode 
-now = datetime.now()
-current_time = now.strftime("%H:%M:%S")
-file1.write(str(current_time) + '\n')
-file1.close() 
-print(current_time)
+lists = ['aaa', 'aaac', 'caaa', 'qqq']
+if not 'aaa ' in lists:
+    print('insert')
+else:
+    print('Duplicated')

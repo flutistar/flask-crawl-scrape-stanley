@@ -10,7 +10,7 @@ import os
 from crawel import getLinks, getOrgName
 import re
 from flask_sqlalchemy import SQLAlchemy
-from model import inputdata
+# from model import inputdata
 from scrap import startscrap
 
 
@@ -23,8 +23,8 @@ app.secret_key = os.urandom(12)  # Generic key for dev purposes only
 # db = SQLAlchemy(app)
 
 # Heroku
-from flask_heroku import Heroku
-heroku = Heroku(app)
+# from flask_heroku import Heroku
+# heroku = Heroku(app)
 
 # ======== Routing =========================================================== #
 # -------- Login ------------------------------------------------------------- #
@@ -62,26 +62,26 @@ def gosignup():
 # -------- Signup ---------------------------------------------------------- #
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    # if not session.get('logged_in'):
-    #     form = forms.LoginForm(request.form)
-    #     if request.method == 'POST':
-    #         username = request.form['username'].lower()
-    #         password = helpers.hash_password(request.form['password'])
-    #         email = request.form['email']
-    #         if form.validate():
-    #             if not helpers.username_taken(username):
-    #                 helpers.add_user(username, password, email)
-    #                 session['logged_in'] = True
-    #                 session['username'] = username
-    #                 print('signup success')
-    #                 return render_template('login.html')
-    #             print('username taken')
-    #             return json.dumps({'status': 'Username taken'})
-    #         print('User/Pass required')
-    #         return json.dumps({'status': 'User/Pass required'})
-    #     print('login.html')
-    #     return render_template('login.html', form=form)
-    # print('login')
+    if not session.get('logged_in'):
+        form = forms.LoginForm(request.form)
+        if request.method == 'POST':
+            username = request.form['username'].lower()
+            password = helpers.hash_password(request.form['password'])
+            email = request.form['email']
+            if form.validate():
+                if not helpers.username_taken(username):
+                    helpers.add_user(username, password, email)
+                    session['logged_in'] = True
+                    session['username'] = username
+                    print('signup success')
+                    return redirect(url_for('login'))
+                print('username taken')
+                return json.dumps({'status': 'Username taken'})
+            print('User/Pass required')
+            return json.dumps({'status': 'User/Pass required'})
+        print('login.html')
+        return render_template('login.html', form=form)
+    print('login')
     return redirect(url_for('logout'))
 
 # -------- Settings ---------------------------------------------------------- #
@@ -113,30 +113,34 @@ def input_url():
         try:
             rst_links= getLinks(url)
         except:
-            print(url)
+            print('Empty Crawled results', url)
         # results = db.session.query(CrawledLinks.url).all()
         result_list = helpers.getcrawleddata()
         # print(type(rst_links))
         if type(rst_links) is not str:
             # org_results = db.session.query(OriginalUrl.url).all()
-            org_urls = helpers.getorgdata()
+            org_urls = helpers.getorgdata(url)
             # print(len(org_results))
-            if not url in org_urls:
-                org_id = len(org_urls) + 1
+            if not org_urls:
+                helpers.addorgdata(url)
+                org_id = helpers.getorgnum()
                 # orgname = getOrgName(url)
                 # print(orgname)
+                org_sub_num = 1
+                for item in rst_links:
+                    # if not item[1] in result_list:
+                    orgid = str(org_id) + '-' + str(org_sub_num)
+                    helpers.addcrawldata(orgid, url, item[0], item[1])
+                        # db.session.add(entry)
+                        # db.session.commit()
+                    org_sub_num += 1 
                 # org_add_row = OriginalUrl(id = org_id, url = url)
                 # db.session.add(org_add_row)
                 # db.session.commit()
-                helpers.addorgdata(org_id, url)
-            org_sub_num = 1
-            for item in rst_links:
-                if not item[1] in result_list:
-                    orgid = str(org_id) + '-' + str(org_sub_num)
-                    helpers.addcrawldata(orgid, url, item[0], item[1])
-                    # db.session.add(entry)
-                    # db.session.commit()
-                    org_sub_num += 1 
+            else:
+                # org_id = len(org_urls)
+                print('Duplicated')
+            
             
     return json.dumps({'links': rst_links})
 
@@ -262,4 +266,4 @@ def startscrape():
 if __name__ == "__main__":
     # db.create_all()
     # db.session.commit()
-    app.run(debug=True, use_reloader=True, host="0.0.0.0")
+    app.run(debug=False, use_reloader=True, host="0.0.0.0")

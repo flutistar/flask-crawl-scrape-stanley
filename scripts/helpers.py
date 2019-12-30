@@ -72,15 +72,16 @@ def getcrawleddata():
         rst = s.query(tabledef.CrawledLinks).all()
         # results = [row[0] for row in rst]
         return rst
-def getorgdata():
+def getorgdata(url):
+    with session_scope() as s:
+        return s.query(tabledef.OriginalUrl).filter(tabledef.OriginalUrl.url.in_([url])).first()
+def getorgnum():
     with session_scope() as s:
         rst = s.query(tabledef.OriginalUrl).all()
-        # print(rst)
-        # results = [row[0] for row in rst]
-        return rst
-def addorgdata(id, url):
+        return len(rst)
+def addorgdata(url):
     with session_scope() as s:
-        row = tabledef.OriginalUrl(id = id, url = url)
+        row = tabledef.OriginalUrl(url = url)
         s.add(row)
         s.commit()
 def addcrawldata(orgid, orgurl, title, url):

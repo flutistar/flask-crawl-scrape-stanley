@@ -7,11 +7,12 @@ from sqlalchemy import Column, Integer, String, Text
 from sqlalchemy.ext.declarative import declarative_base
 
 # Local
-# SQLALCHEMY_DATABASE_URI = 'sqlite:///accounts.db'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///accounts.db'
 # SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:password@localhost:5432/catalog_db'
 
 # Heroku
-SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+# SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+# SQLALCHEMY_DATABASE_URI = os.environ['postgres://ohayvqyxnddnxu:09cfa7da423988d4c477dd363254cb422fbcb04074f02c3cbf74c5af3ca4e441@ec2-174-129-33-196.compute-1.amazonaws.com:5432/d4u780p859e9eg']
 
 Base = declarative_base()
 
@@ -54,7 +55,7 @@ class ScrapedData(Base):
 
 class OriginalUrl(Base):
     __tablename__ = 'originalurl'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement = True)
     # orgname = Column(String(120), nullable=False)
     url = Column(String(250), nullable=False)
     

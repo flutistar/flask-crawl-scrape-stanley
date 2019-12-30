@@ -592,36 +592,36 @@ iframe {
 }
 
 .row .cell:nth-child(1) {
-  width: 20% !important;
+  /* width: 20% !important;
   min-width: 20% !important;
-  max-width: 20% !important;
+  max-width: 20% !important; */
   border-color: #ebefed;
   padding-left: 20px;
   text-align: left;
 }
 
 .row .cell:nth-child(2) {
-  width: 25% !important;
+  /* width: 25% !important;
   min-width: 25% !important;
-  max-width: 25% !important;
+  max-width: 25% !important; */
   border-color: #ebefed;
-  padding-left: 40px;
+  padding-left: 20px;
   text-align: left;
 }
 
 .row .cell:nth-child(3) {
-  width: 25% !important;
+  /* width: 25% !important;
   min-width: 25% !important;
-  max-width: 25% !important;
+  max-width: 25% !important; */
   border-color: #ebefed;
-  padding-left: 40px;
+  padding-left: 20px;
   text-align: left;
 }
 
 .row .cell:nth-child(4) {
-  width: 30% !important;
+  /* width: 30% !important;
   min-width: 30% !important;
-  max-width: 30% !important;
+  max-width: 30% !important; */
   border-color: #ebefed;
   padding-left: 40px;
   text-align: left;
@@ -661,8 +661,10 @@ iframe {
     line-height: 1.2;
     font-weight: unset !important;
   }
-
-  .table, .row, .cell {
+  .content-view {
+    display: block !important;
+  }
+  .table, .row {
     width: 100% !important;
   }
 }

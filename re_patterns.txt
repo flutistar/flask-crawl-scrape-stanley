@@ -1,0 +1,9 @@
+linkpattern -> ^(?:ftp|http|https):\/\/(?:[\w\.\-\+]+:{0,1}[\w\.\-\+]*@)?(?:[a-z0-9\-\.]+)(?::[0-9]+)?(?:\/|\/(?:[\w#!:\.\?\+=&amp;%@!\-\/\(\)]+)|\?(?:[\w#!:\.\?\+=&amp;%@!\-\/\(\)]+))?$
+err -> '.*runtime.?error.*|.*403.?.?forbidden.*|.*not.?found.*',re.IGNORECASE
+about -> '.*about.*|.*Company Overview.*|.*who.we.are.*|.*what.we.do.*',re.IGNORECASE
+company -> '.*company(.?overview)?.*|.*introduction.*',re.IGNORECASE
+management -> '.*management.*|.*directors.*|.*team.*|.*exec.*|.*bod.*|.*leadership.*|.*staff.*|.*board.*',re.IGNORECASE
+contact -> '.*contact.*',re.IGNORECASE
+boo -> True
+name -> '([A-Z]. )?[A-Z][a-z]* ([A-Z]. )?[A-Z][a-z]*'
+word_pattern -> '([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*(?:\s+[a-z]+)?(?:\s+[A-Z][a-z]+)+)'

@@ -1,8 +1,9 @@
 from bs4 import BeautifulSoup, NavigableString, Declaration, Comment
-import urllib2
+# import urllib3
 import re
 import requests
 from error import logError
+from support import getdict
 
 def startscrap(url):
     # url = 'https://thatec-innovation.com/index.php'
@@ -25,19 +26,21 @@ def startscrap(url):
     content = '' # content variable
     results = []  
     title = ''
+    negative_words = getdict('negative.txt')
     for text in texts:
-        if text.parent.name not in blacklist: # Check if current element is in Blacklist
-            if (text.parent.name == 'h1' or text.parent.name == 'h2') and title_flag == 0:
-                title = text
-                title_flag = 1
-                print(title)
-            elif text.parent.name == 'p' or text.parent.name == 'div':
-                if text == '\n' or text == '\r' or text == '\r\n': # Check if the content is null
-                    pass
-                elif isinstance(text, NavigableString): #Check if the element is Comment
-                    if type(text) not in (Comment, Declaration): 
-                        content += text
-    # print(title)
+        if not text.strip() in negative_words:
+            if text.parent.name not in blacklist: # Check if current element is in Blacklist
+                if (text.parent.name == 'h1' or text.parent.name == 'h2') and title_flag == 0:
+                    title = text
+                    title_flag = 1
+                    print(title)
+                elif text.parent.name == 'p' or text.parent.name == 'div':
+                    if text == '\n' or text == '\r' or text == '\r\n': # Check if the content is null
+                        pass
+                    elif isinstance(text, NavigableString): #Check if the element is Comment
+                        if type(text) not in (Comment, Declaration): 
+                            content += text
+        # print(title)
     # print(content)
     results.append(title)
     results.append(content)
