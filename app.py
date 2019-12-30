@@ -23,8 +23,8 @@ app.secret_key = os.urandom(12)  # Generic key for dev purposes only
 # db = SQLAlchemy(app)
 
 # Heroku
-from flask_heroku import Heroku
-heroku = Heroku(app)
+# from flask_heroku import Heroku
+# heroku = Heroku(app)
 
 # ======== Routing =========================================================== #
 # -------- Login ------------------------------------------------------------- #
@@ -145,8 +145,8 @@ def input_url():
 def scrap_page():
     if session.get('logged_in'):
         if request.method == 'GET':
-
-            data = CrawledLinks.query.all()
+            with helpers.session_scope() as s:
+                data = s.query(tabledef.CrawledLinks).all()
             return render_template('scrap.html', data = data)
         return json.dumps({'status': 'Failed'})
     return redirect(url_for('login'))
@@ -260,6 +260,6 @@ def startscrape():
 #         return self.id
 # ======== Main ============================================================== #
 if __name__ == "__main__":
-    db.create_all()
-    db.session.commit()
+    # db.create_all()
+    # db.session.commit()
     app.run(debug=True, use_reloader=True, host="0.0.0.0")

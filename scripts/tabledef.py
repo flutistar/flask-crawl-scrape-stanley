@@ -7,11 +7,11 @@ from sqlalchemy import Column, Integer, String, Text
 from sqlalchemy.ext.declarative import declarative_base
 
 # Local
-# SQLALCHEMY_DATABASE_URI = 'sqlite:///accounts.db'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///accounts.db'
 # SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:password@localhost:5432/catalog_db'
 
 # Heroku
-SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+# SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 
 Base = declarative_base()
 
