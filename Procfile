@@ -1,2 +1,1 @@
-web:gunicorn app:app --log-file=-
-heroku ps:scale web=1
+web: python app.py runserver "0.0.0.0:$PORT"
