@@ -76,19 +76,19 @@ def username_taken(username):
 # -------- Login ------------------------------------------------------------- #
 @app.route('/', methods=['GET', 'POST'])
 def login():
-    if not session.get('logged_in'):
-        form = forms.LoginForm(request.form)
-        if request.method == 'POST':
-            username = request.form['username'].lower()
-            password = request.form['password']
-            if form.validate():
-                if credentials_valid(username, password):
-                    session['logged_in'] = True
-                    session['username'] = username
-                    return json.dumps({'status': 'Login successful'})
-                return json.dumps({'status': 'Invalid user/pass'})
-            return json.dumps({'status': 'Both fields required'})
-        return render_template('login.html', form=form)
+    # if not session.get('logged_in'):
+    form = forms.LoginForm(request.form)
+    if request.method == 'POST':
+        username = request.form['username'].lower()
+        password = request.form['password']
+        if form.validate():
+            if credentials_valid(username, password):
+                session['logged_in'] = True
+                session['username'] = username
+                return json.dumps({'status': 'Login successful'})
+            return json.dumps({'status': 'Invalid user/pass'})
+        return json.dumps({'status': 'Both fields required'})
+    return render_template('login.html', form=form)
     user = get_user()
     return render_template('home.html', user=user)
 
@@ -108,27 +108,22 @@ def gosignup():
 # -------- Signup ---------------------------------------------------------- #
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    if not session.get('logged_in'):
-        form = forms.LoginForm(request.form)
-        if request.method == 'POST':
-            username = request.form['username'].lower()
-            password = hash_password(request.form['password'])
-            email = request.form['email']
-            if form.validate():
-                if not username_taken(username):
-                    add_user(username, password, email)
-                    session['logged_in'] = True
-                    session['username'] = username
-                    print('signup success')
-                    return redirect(url_for('login'))
-                print('username taken')
-                return json.dumps({'status': 'Username taken'})
-            print('User/Pass required')
-            return json.dumps({'status': 'User/Pass required'})
-        print('login.html')
-        return render_template('login.html', form=form)
-    print('login')
-    return redirect(url_for('logout'))
+    # if not session.get('logged_in'):
+    form = forms.LoginForm(request.form)
+    if request.method == 'POST':
+        username = request.form['username'].lower()
+        password = hash_password(request.form['password'])
+        email = request.form['email']
+        if form.validate():
+            if not username_taken(username):
+                add_user(username, password, email)
+                session['logged_in'] = True
+                session['username'] = username
+                return redirect(url_for('login'))
+            return json.dumps({'status': 'Username taken'})
+        return json.dumps({'status': 'User/Pass required'})
+    return render_template('login.html', form=form)
+    # return redirect(url_for('logout'))
 
 # -------- Settings ---------------------------------------------------------- #
 @app.route('/settings', methods=['GET', 'POST'])
@@ -203,23 +198,23 @@ def input_url():
 # --------- Scrap page ------------------------------------------------------------- #
 @app.route("/scrap", methods=['GET', 'POST'])
 def scrap_page():
-    if session.get('logged_in'):
-        if request.method == 'GET':
-            # with helpers.session_scope() as s:
-                # data = s.query(tabledef.CrawledLinks).all()
-            data = CrawledLinks.query.all()
-            return render_template('scrap.html', data = data)
-        return json.dumps({'status': 'Failed'})
-    return redirect(url_for('login'))
+    # if session.get('logged_in'):
+    if request.method == 'GET':
+        # with helpers.session_scope() as s:
+            # data = s.query(tabledef.CrawledLinks).all()
+        data = CrawledLinks.query.all()
+        return render_template('scrap.html', data = data)
+    return json.dumps({'status': 'Failed'})
+    # return redirect(url_for('login'))
 
 @app.route("/viewscraped", methods=['GET', 'POST'])
 def view_data():
-    if session.get('logged_in'):
-        if request.method == 'GET':
-            data = ScrapedData.query.all()
-            return render_template('viewdata.html', data = data)
-        return json.dumps({'status': 'Failed'})
-    return redirect(url_for('login'))
+    # if session.get('logged_in'):
+    if request.method == 'GET':
+        data = ScrapedData.query.all()
+        return render_template('viewdata.html', data = data)
+    return json.dumps({'status': 'Failed'})
+    # return redirect(url_for('login'))
 # @app.route("/viewscraped", methods=['GET', 'POST'])
 # def view_data():
 #     if session.get('logged_in'):
