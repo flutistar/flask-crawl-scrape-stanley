@@ -419,3 +419,185 @@
 [ 15:03:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html#TNM6
 [ 15:03:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html
 [ 17:48:08 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:38:14 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:38:14 ]   Invaled url. Crawl failed. http://www.gruenden.jena.de/index.php?L=1
+[ 21:38:14 ]   Invaled url. Crawl failed. http://www.grintech.de
+[ 21:38:14 ]   Invaled url. Crawl failed. http://www.entrepreneurship.tu-berlin.de
+[ 21:38:14 ]   Invaled url. Crawl failed. http://www.hte-company.com
+[ 21:38:14 ]   Invaled url. Crawl failed. https://www.spin-ag.de
+[ 21:39:58 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:39:58 ]   Invaled url. Crawl failed. https://www.visus.com/en/company.html
+[ 21:39:58 ]   Invaled url. Crawl failed. https://www.eligo.de/en
+[ 21:39:58 ]   Invaled url. Crawl failed. https://www.cognitive-workbench.com/category/overview
+[ 21:39:58 ]   Invaled url. Crawl failed. http://www.grintech.de
+[ 21:39:58 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:40:58 ]   Invaled url. Crawl failed. http://www.desyncra.com
+[ 21:40:58 ]   Invaled url. Crawl failed. http://www.gruenden.jena.de/index.php?L=1
+[ 21:40:58 ]   Invaled url. Crawl failed. http://www.entrepreneurship.tu-berlin.de
+[ 21:40:58 ]   Invaled url. Crawl failed. http://www.hte-company.com
+[ 21:40:58 ]   Invaled url. Crawl failed. https://www.spin-ag.de
+[ 21:40:58 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 21:41:58 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:41:58 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:41:58 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:41:58 ]   Invaled url. Crawl failed. https://www.peptech.de/en
+[ 21:41:58 ]   Invaled url. Crawl failed. https://robodev.eu/en
+[ 21:41:58 ]   Invaled url. Crawl failed. http://www.vision-in-x.com/en/home.html
+[ 21:42:58 ]   Invaled url. Crawl failed. https://www.franka.de
+[ 21:42:59 ]   Invaled url. Crawl failed. http://www.gruenderzentrum.rwth-aachen.de/ueber-uns
+[ 21:42:59 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:42:59 ]   Invaled url. Crawl failed. https://www.uni-luebeck.de/en
+[ 21:42:59 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 21:42:59 ]   Invaled url. Crawl failed. https://www.eligo.de/en
+[ 21:43:59 ]   Invaled url. Crawl failed. https://www.visus.com/en/company.html
+[ 21:43:59 ]   Invaled url. Crawl failed. https://www.cognitive-workbench.com/category/overview
+[ 21:43:59 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:43:59 ]   Invaled url. Crawl failed. http://www.entrepreneurship.tu-berlin.de
+[ 21:43:59 ]   Invaled url. Crawl failed. http://www.grintech.de
+[ 21:43:59 ]   Invaled url. Crawl failed. https://www.spin-ag.de
+[ 21:44:59 ]   Invaled url. Crawl failed. http://www.hte-company.com
+[ 21:44:59 ]   Invaled url. Crawl failed. http://www.gruenden.jena.de/index.php?L=1
+[ 21:44:59 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 21:44:59 ]   Invaled url. Crawl failed. http://www.desyncra.com
+[ 21:44:59 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:44:59 ]   Invaled url. Crawl failed. https://robodev.eu/en
+[ 21:45:59 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:45:59 ]   Invaled url. Crawl failed. http://www.vision-in-x.com/en/home.html
+[ 21:45:59 ]   Invaled url. Crawl failed. https://www.franka.de
+[ 21:45:59 ]   Invaled url. Crawl failed. https://www.peptech.de/en
+[ 21:45:59 ]   Invaled url. Crawl failed. https://www.uni-luebeck.de/en
+[ 21:45:59 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:46:59 ]   Invaled url. Crawl failed. http://www.gruenderzentrum.rwth-aachen.de/ueber-uns
+[ 21:46:59 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 21:46:59 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:46:59 ]   Invaled url. Crawl failed. https://www.eligo.de/en
+[ 21:46:59 ]   Invaled url. Crawl failed. https://www.visus.com/en/company.html
+[ 21:46:59 ]   Invaled url. Crawl failed. https://www.cognitive-workbench.com/category/overview
+[ 21:47:59 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:47:59 ]   Invaled url. Crawl failed. http://www.grintech.de
+[ 21:47:59 ]   Invaled url. Crawl failed. https://www.spin-ag.de
+[ 21:47:59 ]   Invaled url. Crawl failed. http://www.entrepreneurship.tu-berlin.de
+[ 21:47:59 ]   Invaled url. Crawl failed. http://www.hte-company.com
+[ 21:47:59 ]   Invaled url. Crawl failed. http://www.gruenden.jena.de/index.php?L=1
+[ 21:48:59 ]   Invaled url. Crawl failed. http://www.desyncra.com
+[ 21:48:59 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 21:48:59 ]   Invaled url. Crawl failed. http://www.vision-in-x.com/en/home.html
+[ 21:48:59 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:48:59 ]   Invaled url. Crawl failed. https://robodev.eu/en
+[ 21:48:59 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:49:59 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:49:59 ]   Invaled url. Crawl failed. https://www.peptech.de/en
+[ 21:49:59 ]   Invaled url. Crawl failed. https://www.uni-luebeck.de/en
+[ 21:49:59 ]   Invaled url. Crawl failed. http://www.gruenderzentrum.rwth-aachen.de/ueber-uns
+[ 21:49:59 ]   Invaled url. Crawl failed. https://www.franka.de
+[ 21:49:59 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 21:50:59 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:50:59 ]   Invaled url. Crawl failed. https://www.visus.com/en/company.html
+[ 21:50:59 ]   Invaled url. Crawl failed. https://www.eligo.de/en
+[ 21:50:59 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:50:59 ]   Invaled url. Crawl failed. https://www.cognitive-workbench.com/category/overview
+[ 21:50:59 ]   Invaled url. Crawl failed. http://www.grintech.de
+[ 21:51:59 ]   Invaled url. Crawl failed. https://www.spin-ag.de
+[ 21:51:59 ]   Invaled url. Crawl failed. http://www.entrepreneurship.tu-berlin.de
+[ 21:51:59 ]   Invaled url. Crawl failed. http://www.hte-company.com
+[ 21:51:59 ]   Invaled url. Crawl failed. http://www.gruenden.jena.de/index.php?L=1
+[ 21:51:59 ]   Invaled url. Crawl failed. http://www.desyncra.com
+[ 21:51:59 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 21:52:35 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 21:52:36 ]   Invaled url. Crawl failed. https://www.franka.de
+[ 21:52:36 ]   Invaled url. Crawl failed. http://www.gruenderzentrum.rwth-aachen.de/ueber-uns
+[ 21:52:36 ]   Invaled url. Crawl failed. https://www.uni-luebeck.de/en
+[ 21:52:36 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:52:36 ]   Invaled url. Crawl failed. https://www.eligo.de/en
+[ 21:53:36 ]   Invaled url. Crawl failed. http://www.entrepreneurship.tu-berlin.de
+[ 21:53:36 ]   Invaled url. Crawl failed. https://www.visus.com/en/company.html
+[ 21:53:36 ]   Invaled url. Crawl failed. http://www.grintech.de
+[ 21:53:36 ]   Invaled url. Crawl failed. https://www.cognitive-workbench.com/category/overview
+[ 21:53:36 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:53:36 ]   Invaled url. Crawl failed. https://www.spin-ag.de
+[ 21:54:36 ]   Invaled url. Crawl failed. http://www.gruenden.jena.de/index.php?L=1
+[ 21:54:36 ]   Invaled url. Crawl failed. http://www.hte-company.com
+[ 21:54:36 ]   Invaled url. Crawl failed. http://www.desyncra.com
+[ 21:54:36 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:54:36 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 21:54:36 ]   Invaled url. Crawl failed. https://robodev.eu/en
+[ 21:55:36 ]   Invaled url. Crawl failed. http://www.vision-in-x.com/en/home.html
+[ 21:55:36 ]   Invaled url. Crawl failed. https://www.peptech.de/en
+[ 21:55:36 ]   Invaled url. Crawl failed. https://www.uni-luebeck.de/en
+[ 21:55:36 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:55:36 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:55:36 ]   Invaled url. Crawl failed. https://www.franka.de
+[ 21:56:36 ]   Invaled url. Crawl failed. http://www.gruenderzentrum.rwth-aachen.de/ueber-uns
+[ 21:56:36 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 21:56:36 ]   Invaled url. Crawl failed. https://www.eligo.de/en
+[ 21:56:36 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 21:56:36 ]   Invaled url. Crawl failed. https://www.visus.com/en/company.html
+[ 21:56:36 ]   Invaled url. Crawl failed. https://www.cognitive-workbench.com/category/overview
+[ 21:57:36 ]   Invaled url. Crawl failed. http://www.gruenden.jena.de/index.php?L=1
+[ 21:57:36 ]   Invaled url. Crawl failed. http://www.hte-company.com
+[ 21:57:36 ]   Invaled url. Crawl failed. http://www.entrepreneurship.tu-berlin.de
+[ 21:57:36 ]   Invaled url. Crawl failed. https://www.spin-ag.de
+[ 21:57:36 ]   Invaled url. Crawl failed. https://www.ibmt.fraunhofer.de
+[ 21:57:36 ]   Invaled url. Crawl failed. http://www.grintech.de
+[ 21:58:36 ]   Invaled url. Crawl failed. http://www.desyncra.com
+[ 21:58:36 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 21:58:36 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 21:58:36 ]   Invaled url. Crawl failed. https://robodev.eu/en
+[ 21:58:36 ]   Invaled url. Crawl failed. http://www.exerlights.com/en
+[ 21:58:36 ]   Invaled url. Crawl failed. http://www.vision-in-x.com/en/home.html
+[ 21:59:36 ]   Invaled url. Crawl failed. https://www.peptech.de/en
+[ 21:59:36 ]   Invaled url. Crawl failed. http://www.gtandw.com
+[ 21:59:36 ]   Invaled url. Crawl failed. http://www.gruenderzentrum.rwth-aachen.de/ueber-uns
+[ 21:59:36 ]   Invaled url. Crawl failed. https://www.franka.de
+[ 21:59:36 ]   Invaled url. Crawl failed. https://www.uni-luebeck.de/en
+[ 21:59:36 ]   Invaled url. Crawl failed. http://www.bio-med-tec.de
+[ 22:00:36 ]   Invaled url. Crawl failed. https://www.tzl.de/firmenportal/industrie.html
+[ 22:00:36 ]   Invaled url. Crawl failed. https://www.eligo.de/en
+[ 22:00:36 ]   Invaled url. Crawl failed. https://www.visus.com/en/company.html
+[ 22:00:36 ]   Invaled url. Crawl failed. https://www.cognitive-workbench.com/category/overview
+[ 22:10:42 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html
+[ 22:10:42 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/doctorate/centre-for-doctoral-studies-luebeck/centre-for-doctoral-studies-luebeck.html
+[ 22:10:42 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/doctorate/centre-for-doctoral-studies-luebeck/overview.html
+[ 22:10:43 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/research/events.html
+[ 22:10:46 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/technology-transfer/economic-cooperations-and-contract-research/contract-research.html
+[ 22:10:47 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/technology-transfer/economic-cooperations-and-contract-research/cooperation-agreements.html
+[ 22:11:32 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html#TNM5
+[ 22:11:32 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html#TNM4
+[ 22:11:33 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html
+[ 22:11:33 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html
+[ 22:11:34 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html#TNM6
+[ 22:14:01 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:14:18 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:19:08 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:25:06 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:26:37 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:27:53 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:28:35 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:29:57 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:32:14 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:46:42 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:48:42 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:48:43 ]   Invaled url. Crawl failed. http://www.thatec-innovation.de
+[ 22:50:48 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:52:02 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:52:40 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:53:38 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:54:31 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:55:59 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:56:27 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:58:11 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 22:58:49 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 23:00:04 ]   Invaled url. Crawl failed. http://transinsight.com
+[ 23:01:43 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html
+[ 23:01:44 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/doctorate/centre-for-doctoral-studies-luebeck/centre-for-doctoral-studies-luebeck.html
+[ 23:01:44 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/doctorate/centre-for-doctoral-studies-luebeck/overview.html
+[ 23:01:46 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/research/events.html
+[ 23:01:47 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/technology-transfer/economic-cooperations-and-contract-research/cooperation-agreements.html
+[ 23:01:48 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/technology-transfer/economic-cooperations-and-contract-research/contract-research.html
+[ 23:02:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html
+[ 23:02:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html#TNM4
+[ 23:02:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/doctorate/centre-for-doctoral-studies-luebeck/centre-for-doctoral-studies-luebeck.html
+[ 23:02:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html
+[ 23:02:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html#TNM4
+[ 23:02:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html#TNM6
+[ 23:43:27 ]   Invaled url. Crawl failed. http://transinsight.com

@@ -45,7 +45,7 @@ def getLinks(url):
         if text.parent.name in allowlist:
             orgname = text
             break
-    # print(orgname) 
+    print(orgname) 
     # -------------------------------------------------
     rst_links = []
     positive_dict = []
@@ -56,13 +56,13 @@ def getLinks(url):
     #     'system', 'team', 'technology', 'training', 'university']
     positive_dict = getdict('positive.txt')
     negative_dict = getdict('negative.txt')
-    regex = re.compile(
-        r'^https?://'  # http:// or https://
-        r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|'  # domain...
-        r'localhost|'  # localhost...
-        r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' # ...or ip
-        r'(?::\d+)?'  # optional port
-        r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+    # regex = re.compile(
+    #     r'^https?://'  # http:// or https://
+    #     r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|'  # domain...
+    #     r'localhost|'  # localhost...
+    #     r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' # ...or ip
+    #     r'(?::\d+)?'  # optional port
+    #     r'(?:/?|[/?]\S+)$', re.IGNORECASE)
     for link in soup.findAll('a'):
         txt = link.get_text()
         if txt.lower() in positive_dict and not txt.lower() in negative_dict:
