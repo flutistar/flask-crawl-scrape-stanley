@@ -418,3 +418,4 @@
 [ 15:03:08 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html
 [ 15:03:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/university.html#TNM6
 [ 15:03:10 ]   Scraped Failed. https://www.uni-luebeck.de/en/en/university/contact/representatives.html
+[ 17:48:08 ]   Invaled url. Crawl failed. http://transinsight.com
